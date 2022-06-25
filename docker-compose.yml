@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  mytest:
+    restart: always
+    build: ./
+    image: mytest
+    container_name: mytest
+    volumes:
+      - /root/mytest/logs-docker/:/mytest/logs/
+      - /root/mytest/mytest.jar:/mytest/app.jar
+    expose:
+      - "8001"
+    ports:
+      - "8001:8001"
+    networks:
+      allot:
+        ipv4_address: 172.31.0.2
+networks:
+  mytest:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.31.0.0/16
+          gateway: 172.31.0.1
