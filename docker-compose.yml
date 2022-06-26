@@ -8,7 +8,7 @@ services:
     container_name: mytest
     volumes:
       - /root/docker-contains/mytest/logs-docker/:/mytest/logs/
-      - /root/docker-contains/mytest/mytest.jar:/mytest/app.jar
+      - /root/docker-contains/mytest/target/mytest.jar:/mytest/app.jar
     expose:
       - "8001"
     ports:

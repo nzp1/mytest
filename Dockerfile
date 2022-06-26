@@ -16,7 +16,7 @@ WORKDIR /mytest
 
 EXPOSE 8001
 
-ADD ./target/mytest.jar ./app.jar
+#ADD ./target/mytest.jar ./app.jar
 
 ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "app.jar"]
 
