@@ -3,8 +3,8 @@ version: '3.8'
 services:
   mytest:
     restart: always
-    build: ./
-    image: mytest
+#    build: ./
+    image: openjdk:test
     container_name: mytest
     volumes:
       - /root/mytest/logs-docker/:/mytest/logs/
