@@ -10,9 +10,9 @@ services:
       - /root/docker-contains/mytest/logs-docker/:/allot/logs/
       - /root/docker-contains/mytest/target/mytest.jar:/allot/app.jar
     expose:
-      - "8001"
+      - "8080"
     ports:
-      - "8001:8001"
+      - "8001:8080"
     networks:
       mytest:
         ipv4_address: 172.31.0.2
