@@ -14,7 +14,7 @@ RUN mkdir -p /mytest
 
 WORKDIR /mytest
 
-EXPOSE 8001
+EXPOSE 8080
 
 #ADD ./target/mytest.jar ./app.jar
 
