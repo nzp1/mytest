@@ -4,7 +4,7 @@ services:
   mytest:
     restart: always
 #    build: ./
-    image: openjdk:test
+    image: openjdktest:2.0
     container_name: mytest
     volumes:
       - /root/docker-contains/mytest/logs-docker/:/allot/logs/
