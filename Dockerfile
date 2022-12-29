@@ -2,7 +2,7 @@ FROM openjdk:8-jdk-alpine
 
 RUN echo -e "https://mirrors.aliyun.com/alpine/v3.14/main/\nhttps://mirrors.aliyun.com/alpine/v3.14/community/" > /etc/apk/repositories \
     && apk update \
-    && apk add --no-cache wget ttf-dejavu tzdata \
+    && apk add --no-cache wget vim tar ttf-dejavu tzdata \
     && apk upgrade musl \
     && echo "Asia/Shanghai" > /etc/timezone \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
@@ -10,13 +10,11 @@ RUN echo -e "https://mirrors.aliyun.com/alpine/v3.14/main/\nhttps://mirrors.aliy
     && wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.34-r0/glibc-2.34-r0.apk \
     && apk add --no-cache glibc-2.34-r0.apk
 
-RUN mkdir -p /mytest
+RUN mkdir -p /bankend
 
-WORKDIR /mytest
+WORKDIR /bankend
 
 EXPOSE 8080
-
-#ADD ./target/mytest.jar ./app.jar
 
 ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "app.jar"]
 
