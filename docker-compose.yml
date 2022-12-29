@@ -3,8 +3,8 @@ version: '3.8'
 services:
   mytest:
     restart: always
-    build: ./
-#    image: openjdktest:2.0
+#    build: ./
+    image: openjdktest:2.0
     container_name: mytest
     volumes:
       - /root/docker-contains/mytest/logs-docker/:/bankend/logs/
