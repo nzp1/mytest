@@ -9,7 +9,7 @@ pipeline{
 	stages {
         stage('拉取git仓库代码') {
             steps {
-                echo '拉取git仓库代码- success'
+		    checkout([$class: 'GitSCM', branches: [[name: '${tag}']], extensions: [], userRemoteConfigs: [[credentialsId: '5452a98c-5eed-4a0e-acde-3e17ee48b4d8', url: 'git@github.com:nzp1/mytest.git']]])
             }
         }
         stage('通过maven构建项目') {
