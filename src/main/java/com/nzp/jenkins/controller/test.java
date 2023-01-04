@@ -1,5 +1,6 @@
 package com.nzp.jenkins.controller;
 
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class test {
     @GetMapping("/test")
     public String test() {
-        return "jenks";
+        System.out.println("s");
+        return "Dsd";
     }
 }
