@@ -24,7 +24,11 @@ pipeline{
         }
 		stage('执行脚本') {
             steps {
-                echo '执行脚本- success'
+                sshPublisher(publishers: [sshPublisherDesc(configName: 'my_cloud', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''cd  /root/docker-contains/mytest
+mv ./target/*.jar ./back
+mv ./update/* ./
+docker-compose -f docker-compose.yml down
+docker-compose -f docker-compose.yml up -d''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/root/docker-contains/mytest/update', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'target/*.jar')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
             }
         }
     }
