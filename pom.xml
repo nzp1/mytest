@@ -11,7 +11,8 @@
     <packaging>jar</packaging>
     <groupId>com.nzp</groupId>
     <artifactId>jenkins</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+<!--    <version>0.0.1-SNAPSHOT</version>-->
+    <version>0.0.1-RELEASE</version>
     <name>jenkins</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -27,6 +28,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springblade</groupId>
+            <artifactId>blade-core-context</artifactId>
+            <version>2.9.1.RELEASE</version>
         </dependency>
     </dependencies>
 
