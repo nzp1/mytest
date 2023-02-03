@@ -33,3 +33,4 @@ docker-compose -f docker-compose.yml up -d''', execTimeout: 120000, flatten: fal
         }
     }
 }
+}
