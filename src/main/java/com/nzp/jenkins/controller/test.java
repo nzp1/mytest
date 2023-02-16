@@ -16,6 +16,6 @@ public class test {
     @GetMapping("/test")
     public String test() {
         System.out.println("s");
-        return "Dsd";
+        return "jdk";
     }
 }
