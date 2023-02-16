@@ -6,6 +6,12 @@ pipeline{
     	key = 'value'
 	}
 	stages {
+	    stage("checkout mvn") {
+            sh "${MAVEN_HOME}mvn --version"
+        }
+        stage("check java") {
+            sh "${JAVA_HOME}/bin/java -version"
+        }
         stage('拉取git仓库代码') {
             steps {
 		    checkout([$class: 'GitSCM', branches: [[name: '${tag}']], extensions: [], userRemoteConfigs: [[credentialsId: '5452a98c-5eed-4a0e-acde-3e17ee48b4d8', url: 'git@github.com:nzp1/mytest.git']]])
