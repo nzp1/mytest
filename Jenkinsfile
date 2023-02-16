@@ -1,4 +1,3 @@
-// 所有的脚本命令都放在pipeline
 pipeline{
 	//指定任务在那个集群
     agent any
@@ -32,5 +31,4 @@ docker-compose -f docker-compose.yml up -d''', execTimeout: 120000, flatten: fal
             }
         }
     }
-}
 }
