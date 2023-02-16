@@ -7,10 +7,14 @@ pipeline{
 	}
 	stages {
 	    stage("checkout mvn") {
-            sh "${MAVEN_HOME}mvn --version"
+	        steps {
+                sh "${MAVEN_HOME}mvn --version"
+            }
         }
         stage("check java") {
-            sh "${JAVA_HOME}/bin/java -version"
+            steps {
+                sh "${JAVA_HOME}/bin/java -version"
+            }
         }
         stage('拉取git仓库代码') {
             steps {
