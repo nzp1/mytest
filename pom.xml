@@ -11,8 +11,7 @@
     <packaging>jar</packaging>
     <groupId>com.nzp</groupId>
     <artifactId>jenkins</artifactId>
-<!--    <version>0.0.1-SNAPSHOT</version>-->
-    <version>0.0.1-RELEASE</version>
+    <version>1.0.0</version>
     <name>jenkins</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -47,9 +46,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-<!--                    <compilerArgs>&#45;&#45;enable-preview</compilerArgs>-->
+                    <source>17</source>
+                    <target>17</target>
                 </configuration>
             </plugin>
         </plugins>
