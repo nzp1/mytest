@@ -8,12 +8,12 @@ pipeline{
 	stages {
 	    stage("checkout mvn") {
 	        steps {
-                sh '${MAVEN_HOME}mvn --version'
+                sh '${maven}mvn --version'
             }
         }
         stage("check java") {
             steps {
-                sh '${JAVA_HOME}/bin/java -version'
+                sh '${jdk17}/bin/java -version'
             }
         }
         stage('拉取git仓库代码') {
