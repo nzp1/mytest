@@ -5,6 +5,9 @@ pipeline{
     environment{
     	key = 'value'
 	}
+	tools {
+        jdk 'jdk17'
+    }
 	stages {
         stage('拉取git仓库代码') {
             steps {
